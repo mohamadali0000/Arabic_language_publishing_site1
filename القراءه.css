@@ -1,0 +1,72 @@
+body {
+    font-family: "Tajawal", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #c69c6d, #8b5e3c);
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    direction: rtl;
+    position: relative;
+}
+
+/* تنسيق عنوان الصفحة */
+header {
+    background-color: #623E2A;
+    color: white;
+    padding: 50px 15px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* الزخارف العربية */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); 
+    opacity: 5.0; /* تخفيف الزخرفة */
+    z-index: -1;
+}
+
+/* تأثير زخرفي متحرك */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 223, 186, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 223, 186, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(255, 223, 186, 0.3); }
+}
+
+/* تنسيق صندوق المحتوى */
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: glow 3s infinite alternate;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #623E2A;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #8C6B4F;
+    transform: scale(1.05);
+}

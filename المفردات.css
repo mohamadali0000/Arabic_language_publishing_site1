@@ -1,0 +1,278 @@
+/* إعدادات أساسية */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: "Tajawal", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #c69c6d, #8b5e3c);
+    text-align: center;
+    direction: rtl;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+    opacity: 5.0;
+    z-index: -1;
+}
+
+/* تأثير زخرفي متحرك */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 223, 186, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 223, 186, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(255, 223, 186, 0.3); }
+}
+
+/* شريط التنقل */
+.navbar {
+    background-color: #623E2A;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 0 0 00px 00px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #8C8987;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+nav .active {
+    font-weight: bold;
+    background-color: #8c6b4f00;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+
+
+/* تنسيق العنوان */
+header {
+    background-color: #623E2A;
+    color: white;
+    padding: 50px 15px;
+    text-align: center;
+    border-radius: 0 0 0px 0px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: bold;
+}
+
+/* تصميم البوكسات */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.box {
+    width: 700px;
+    background-color: #402C1A;
+    border: 2px solid #402C1A;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ترويسة البوكس */
+.box .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #F2F2F2;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+/* توسيط عنوان البوكس */
+.box .heading h3 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    color: #623E2A;
+}
+
+/* زر التوسيع */
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    color: #8C8987;
+    position: absolute;
+    left: 20px;
+}
+
+/* حركة زر التوسيع عند الفتح */
+.box.active .toggle-btn i {
+    transform: rotate(180deg);
+}
+
+/* المحتوى المخفي */
+.box .content {
+    line-height: 1.8;
+    height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* المحتوى يظهر عند فتح البوكس */
+.box.active .content {
+    height: auto;
+    padding: 10px 15px;
+}
+
+/* تنسيق الرابط داخل المحتوى */
+.content a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.content a:hover {
+    background-color: #8C8987;
+    color: #ffffff;
+    transform: scale(1.0);
+}
+
+/* تحسين تجاوب البوكسات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+    }
+}
+
+
+
+.about-arabic {
+    width: 80%;
+    margin: 30px auto;
+    background: #623E2A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    text-align: right;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.intro {
+    font-size: 20px;
+    font-weight: bold;
+    color: #623E2A;
+}
+
+.importance {
+    font-style: italic;
+    color: #8C6B4F;
+}
+
+.how-to-spread {
+    background: #EFEFEF;
+    padding: 10px;
+    border-left: 5px solid #8C8987;
+}
+
+.vocab-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.vocab-item {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    transition: all 0.3s;
+}
+
+.vocab-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgb(0, 0, 0);
+}
+
+.vocab-item h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #1f1d1b;
+}
+
+.vocab-item p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+.vocab-container {
+    display: flex;
+    flex-wrap: wrap; /* يسمح بنزول العناصر للسطر التالي لو ما كان فيه مساحة */
+    justify-content: center; /* توسيط العناصر */
+    gap: 20px; /* مسافة بين العناصر */
+    padding: 20px;
+}
+
+.vocab-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #0000002f;
+    padding: 20px;
+    width: 250px; /* عرض العنصر */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+
+h3 {
+    text-align: right;
+    margin-right: 20px; /* لو بدك تبعده شوي عن الحافة */
+}
+

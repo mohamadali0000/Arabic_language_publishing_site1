@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Bebas+Neue&display=swap');
+
+
+html, body {
+    height: 100%;
+    margin: 00;
+    padding: 0;
+}
+
+body {
+    
+    background: linear-gradient(135deg, #c69c6d, #8b5e3c);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    direction: rtl;
+
+    line-height: 1.7em;
+}
+
+/* تنسيق عنوان الصفحة */
+header {
+    background-color: #623E2A;
+    color: white;
+    padding: 30px 10px;
+    border-radius: 0 0 0px 0px;
+}
+
+/* الزخارف العربية */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 850%;
+    background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); 
+    opacity: 5.0; /* تخفيف الزخرفة */
+    z-index: -1;
+}
+
+/* تأثير زخرفي متحرك */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 223, 186, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 223, 186, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(255, 223, 186, 0.3); }
+}
+
+
+
+.container {
+    background: rgba(0, 0, 0, 0.477);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: glow 3s infinite alternate;
+    max-width: 1000px;
+    margin: 90px auto;
+    
+    font-size: 22px; /* تكبير الخط */
+    line-height: 1.9em; /* زيادة المسافة بين الأسطر */
+    font-weight: bold; /* جعل الخط أكثر وضوحًا */
+}
+/* تنسيق صندوق المحتوى */
+.container {
+    background: rgba(0, 0, 0, 0.477);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: glow 3s infinite alternate;
+    max-width: 1000px;
+    margin: 90px auto;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px;
+    padding: 12px 25px;  
+    font-size: 18px;
+    background-color: #623E2A;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #8C6B4F;
+    transform: scale(1.05);
+}
